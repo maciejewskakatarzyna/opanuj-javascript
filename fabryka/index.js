@@ -12,15 +12,15 @@
 */
 
 function factory() {
-    return { quote: 'Cool!' };
-}
-
-verify(factory().quote, 'Cool!');
-
-function verify(input, goal) {
+    const quote = 'Cool!';
+  }
+  
+  verify(factory().quote, 'Cool!');
+  
+  function verify(input, goal) {
     if (input === goal) {
-        console.log('Gratulacje!');
+      console.log('Gratulacje!');
     } else {
-        console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
+      console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
     }
-}
+  }

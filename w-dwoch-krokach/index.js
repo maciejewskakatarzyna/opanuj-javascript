@@ -32,34 +32,24 @@
 */
 
 function withPrefix(prefix) {
-    if (typeof prefix !== 'string') {
-        throw new Error('Prefix musi być stringiem');
-    }
-
-    return function(name) {
-        if (typeof name !== 'string') {
-            throw new Error('Name musi być stringiem');
-        }
-
-        return prefix + name;
-    }
-}
-
-/* Weryfikacja */
-
-function verify(input, goal) {
+    return 'test';
+  }
+  
+  /* Weryfikacja */
+  
+  function verify(input, goal) {
     if (input === goal) {
-        console.log('Gratulacje!');
+      console.log('Gratulacje!');
     } else {
-        console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
+      console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
     }
-}
-
-const course = withPrefix('I ty Opanujesz JavaScript, ')
-
-try {
+  }
+  
+  const course = withPrefix('I ty Opanujesz JavaScript, ')
+  
+  try {
     verify(course('Marta'), 'I ty Opanujesz JavaScript, Marta');
     verify(course('Janek'), 'I ty Opanujesz JavaScript, Janek');
-} catch {
+  } catch {
     console.log('Niestety :(')
-}
+  }

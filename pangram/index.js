@@ -26,29 +26,19 @@
 */
 
 function isPangram(sentence) {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-    const letters = new Set();
-
-    for (let i = 0; i < sentence.length; i++) {
-        const char = sentence[i].toLowerCase();
-        if (alphabet.includes(char)) {
-            letters.add(char);
-        }
-    }
-
-    return letters.size === alphabet.length;
-}
-
-/* Weryfikacja */
-
-function verify(input, goal) {
+    return true
+  }
+  
+  /* Weryfikacja */
+  
+  function verify(input, goal) {
     if (input === goal) {
-        console.log('Gratulacje!');
+      console.log('Gratulacje!');
     } else {
-        console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
+      console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
     }
-}
-
-verify(isPangram('test'), false);
-verify(isPangram('Dość gróźb fuzją, klnę, pych i małżeństw!'), true);
-verify(isPangram('Dość gróźb fuzją, klnę, pych i małże!'), false);
+  }
+  
+  verify(isPangram('test'), false);
+  verify(isPangram('Dość gróźb fuzją, klnę, pych i małżeństw!'), true);
+  verify(isPangram('Dość gróźb fuzją, klnę, pych i małże!'), false);

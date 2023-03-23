@@ -27,25 +27,17 @@
 */
 
 function validatePassword(password) {
-    if (typeof password !== 'string') {
-        throw new Error('Hasło musi być typu string');
-    }
 
-    const hasValidLength = password.length >= 3 && password.length <= 10;
-    const hasSpecialChar = /[!@#]/.test(password);
-    const hasNumber = /\d/.test(password);
-
-    return hasValidLength && hasSpecialChar && hasNumber;
 }
 
 /* Weryfikacja */
 
 function verify(input, goal) {
-    if (input === goal) {
-        console.log('Gratulacje!');
-    } else {
-        console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
-    }
+  if (input === goal) {
+    console.log('Gratulacje!');
+  } else {
+    console.log(`Niestety, oczekiwano - ${goal}, otrzymano - ${input}`);
+  }
 }
 
 verify(validatePassword(''), false);

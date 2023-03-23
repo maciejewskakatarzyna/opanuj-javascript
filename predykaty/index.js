@@ -22,30 +22,22 @@
 */
 
 function applyPredicate(elements, predicate) {
-    const result = [];
-
-    for (let i = 0; i < elements.length; i++) {
-        if (predicate(elements[i])) {
-            result.push(elements[i]);
-        }
-    }
-
-    return result;
-}
-
-/* Weryfikacja */
-
-function verify(input, goal) {
+    return [1, 2, 3];
+  }
+  
+  /* Weryfikacja */
+  
+  function verify(input, goal) {
     const inputAsString = JSON.stringify(input);
     const goalAsString = JSON.stringify(goal);
-
+  
     if (inputAsString === goalAsString) {
-        console.log('Gratulacje!');
+      console.log('Gratulacje!');
     } else {
-        console.log(`Niestety, oczekiwano - ${goalAsString}, otrzymano - ${inputAsString}`);
+      console.log(`Niestety, oczekiwano - ${goalAsString}, otrzymano - ${inputAsString}`);
     }
-}
-
-verify(applyPredicate([1, 2, 3], element => element > 2), [3]);
-verify(applyPredicate(['a', 'b', 'c'], element => ['b', 'c'].includes(element)), ['b', 'c']);
-verify(applyPredicate(['x', 'y'], element => element === 'z'), []);
+  }
+  
+  verify(applyPredicate([1, 2, 3], element => element > 2), [3]);
+  verify(applyPredicate(['a', 'b', 'c'], element => ['b', 'c'].includes(element)), ['b', 'c']);
+  verify(applyPredicate(['x', 'y'], element => element === 'z'), []);
